@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ashish Shankar — Full-Stack & Mobile Developer</title>
+  <meta name="description" content="Minimal black and white portfolio of Ashish Shankar (Ashishshankar26) — Full-Stack Developer & Engineering Student at LPU building ALMS, ClubPulse, CivicLens, and FreelanceHub." />
+  <meta name="theme-color" content="#0a0a0a" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Subtle architectural grid overlay -->
+  <div class="grid-lines" aria-hidden="true">
+    <span></span><span></span><span></span><span></span>
+  </div>
+
+  <!-- Top Navigation -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#top" class="brand" aria-label="Ashish Shankar Home">
+        <span class="brand-mark">AS/26</span>
+        <span class="brand-name">Ashish Shankar</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary Navigation">
+        <a href="#work">Work</a>
+        <a href="#archive">Archive</a>
+        <a href="#about">About</a>
+        <a href="#stack">Stack</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <button id="cmdTrigger" class="icon-btn" type="button" title="Command Palette (Ctrl+K)" aria-label="Open Command Palette">
+          <span class="mono">⌘K</span>
+        </button>
+        <button id="themeToggle" class="icon-btn" type="button" title="Invert Polarity (I)" aria-label="Toggle Black and White Theme">
+          <span class="polarity-dot" aria-hidden="true"></span>
+          <span class="mono theme-label">INVERT</span>
+        </button>
+        <button id="mobileMenuBtn" class="icon-btn mobile-only" type="button" aria-label="Toggle Menu" aria-expanded="false">
+          <span class="mono">MENU</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobileNav" class="mobile-nav" hidden>
+      <a href="#work">01 / Featured Work</a>
+      <a href="#archive">02 / All Projects</a>
+      <a href="#about">03 / About & Experience</a>
+      <a href="#stack">04 / Technical Stack</a>
+      <a href="#contact">05 / Contact</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- Hero Section -->
+    <section class="hero container">
+      <div class="hero-meta">
+        <span class="status-pill">
+          <span class="pulse-dot" aria-hidden="true"></span>
+          AVAILABLE FOR INTERNSHIPS &amp; COLLABORATIONS
+        </span>
+        <span class="mono muted">INDIA · LPU · @ASHISHSHANKAR26</span>
+      </div>
+
+      <h1 class="hero-title">
+        Building <span class="serif-italic">focused</span> software,
+        <br />
+        from campus tools to
+        <span class="serif-italic">scalable</span> systems.
+      </h1>
+
+      <div class="hero-bottom">
+        <p class="hero-bio">
+          I'm <strong>Ashish Shankar</strong> (<em>Revenger</em> on GitHub) — a Full-Stack &amp; Mobile Developer and Engineering Student at Lovely Professional University. I turn everyday friction into fast, reliable products: scaling <strong>ALMS</strong> for peers, engineering <strong>ClubPulse</strong>, mapping civic issues with <strong>CivicLens</strong>, and shipping full-stack web platforms.
+        </p>
+
+        <div class="hero-cta">
+          <a href="#work" class="btn btn-primary">Explore Work ↓</a>
+          <a href="https://github.com/Ashishshankar26" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+            GitHub ↗
+          </a>
+          <button id="copyEmailHero" class="btn btn-ghost" type="button" data-email="oneashishshankar@gmail.com">
+            Copy Email
+          </button>
+        </div>
+      </div>
+
+      <!-- Minimal Telemetry Strip -->
+      <div class="metrics-strip">
+        <div class="metric">
+          <span class="metric-value">17+</span>
+          <span class="metric-label">Public Repositories</span>
+        </div>
+        <div class="metric">
+          <span class="metric-value">04</span>
+          <span class="metric-label">Flagship Platforms</span>
+        </div>
+        <div class="metric">
+          <span class="metric-value">TS · PY · C++</span>
+          <span class="metric-label">Core Languages</span>
+        </div>
+        <div class="metric">
+          <span class="metric-value" id="localTime">--:-- IST</span>
+          <span class="metric-label">Local Time (India)</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Work -->
+    <section id="work" class="section container">
+      <div class="section-header">
+        <div>
+          <span class="section-index mono">01 / SELECTED WORK</span>
+          <h2 class="section-title">Featured Projects</h2>
+        </div>
+        <p class="section-subtitle">
+          High-impact mobile apps, full-stack platforms, and civic tools actively built and shipped.
+        </p>
+      </div>
+
+      <div id="featuredGrid" class="featured-grid">
+        <!-- Populated by script.js -->
+      </div>
+    </section>
+
+    <!-- Complete Project Archive -->
+    <section id="archive" class="section container">
+      <div class="section-header">
+        <div>
+          <span class="section-index mono">02 / COMPLETE INDEX</span>
+          <h2 class="section-title">All GitHub Projects</h2>
+        </div>
+        <p class="section-subtitle">
+          Filterable directory of repositories, APIs, cloud systems, and experiments.
+        </p>
+      </div>
+
+      <div class="archive-controls">
+        <div class="filter-group" role="tablist" aria-label="Project Categories">
+          <button class="filter-btn active" data-filter="all" type="button">All (14)</button>
+          <button class="filter-btn" data-filter="fullstack" type="button">Full-Stack</button>
+          <button class="filter-btn" data-filter="mobile" type="button">Mobile</button>
+          <button class="filter-btn" data-filter="ai-cloud" type="button">AI &amp; Cloud</button>
+          <button class="filter-btn" data-filter="systems" type="button">Systems</button>
+        </div>
+
+        <div class="search-wrap">
+          <input
+            id="projectSearch"
+            type="search"
+            placeholder="Filter by name, tech, or keyword..."
+            aria-label="Search projects"
+          />
+        </div>
+      </div>
+
+      <div id="archiveList" class="archive-list">
+        <!-- Populated by script.js -->
+      </div>
+    </section>
+
+    <!-- About & Experience -->
+    <section id="about" class="section container">
+      <div class="section-header">
+        <div>
+          <span class="section-index mono">03 / PROFILE &amp; MILESTONES</span>
+          <h2 class="section-title">About &amp; Experience</h2>
+        </div>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-narrative">
+          <div class="profile-card">
+            <img
+              src="https://avatars.githubusercontent.com/u/177911351?v=4"
+              alt="Ashish Shankar GitHub Avatar"
+              class="avatar"
+              loading="lazy"
+            />
+            <div>
+              <h3>Ashish Shankar</h3>
+              <p class="mono muted">@Ashishshankar26 · Revenger</p>
+              <p class="muted small">Lovely Professional University · India</p>
+            </div>
+          </div>
+
+          <p class="lead-text">
+            I build practical software that solves real bottlenecks—whether it's replacing sluggish university portals for thousands of students, preventing burnout in college clubs, or architecting payment-protected freelance marketplaces.
+          </p>
+          <p class="body-text">
+            My work spans native mobile applications (React Native / Expo), full-stack TypeScript and MERN systems, cloud storage &amp; deduplication architectures, and low-level C++ system monitoring.
+          </p>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <span class="mono timeline-date">2026 — PRESENT</span>
+            <h4>Scaling ALMS &amp; ClubPulse</h4>
+            <p>
+              Building and scaling campus-wide engineering products at LPU—delivering native UMS access via ALMS and organizational telemetry with ClubPulse.
+            </p>
+          </div>
+          <div class="timeline-item">
+            <span class="mono timeline-date">OCT 2026</span>
+            <h4>AWS Student Builder Group · Hacktoberfest</h4>
+            <p>
+              Contributed to the official Hacktoberfest Meetup Phagwara 2026 platform and open-source developer community at LPU.
+            </p>
+          </div>
+          <div class="timeline-item">
+            <span class="mono timeline-date">SEP 2026</span>
+            <h4>Cloud Computing Intern · CodSoft</h4>
+            <p>
+              Engineered multi-cloud file storage (AWS S3 / MinIO) with cryptographic signed links and a SHA-256 content-addressable deduplication system.
+            </p>
+          </div>
+          <div class="timeline-item">
+            <span class="mono timeline-date">2024 — PRESENT</span>
+            <h4>B.Tech Engineering · LPU</h4>
+            <p>
+              Pursuing Computer Science &amp; Engineering while shipping 17+ public repositories across web, mobile, AI/RAG, and systems programming.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technical Stack -->
+    <section id="stack" class="section container">
+      <div class="section-header">
+        <div>
+          <span class="section-index mono">04 / CAPABILITIES</span>
+          <h2 class="section-title">Technical Stack</h2>
+        </div>
+      </div>
+
+      <div class="stack-grid">
+        <div class="stack-cell">
+          <span class="mono stack-num">01</span>
+          <h3>Languages</h3>
+          <ul>
+            <li>TypeScript</li>
+            <li>JavaScript (ES6+)</li>
+            <li>Python</li>
+            <li>C++</li>
+            <li>HTML5 &amp; CSS3</li>
+          </ul>
+        </div>
+
+        <div class="stack-cell">
+          <span class="mono stack-num">02</span>
+          <h3>Frontend &amp; Mobile</h3>
+          <ul>
+            <li>React &amp; Next.js (App Router)</li>
+            <li>React Native &amp; Expo</li>
+            <li>Google Maps SDK</li>
+            <li>Responsive Grid &amp; UI Systems</li>
+            <li>Socket.IO Client</li>
+          </ul>
+        </div>
+
+        <div class="stack-cell">
+          <span class="mono stack-num">03</span>
+          <h3>Backend &amp; Databases</h3>
+          <ul>
+            <li>Node.js &amp; Express.js</li>
+            <li>MongoDB &amp; Mongoose</li>
+            <li>REST APIs &amp; Webhooks</li>
+            <li>JWT &amp; httpOnly Auth</li>
+            <li>Cashfree UPI &amp; SMTP</li>
+          </ul>
+        </div>
+
+        <div class="stack-cell">
+          <span class="mono stack-num">04</span>
+          <h3>Cloud, AI &amp; Tooling</h3>
+          <ul>
+            <li>AWS S3 / R2 / MinIO</li>
+            <li>Docker &amp; Vercel / Railway</li>
+            <li>RAG Pipelines &amp; Ollama / Whisper</li>
+            <li>Playwright Automation</li>
+            <li>Git &amp; GitHub CLI</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section container contact-section">
+      <div class="contact-box">
+        <span class="section-index mono">05 / GET IN TOUCH</span>
+        <h2 class="contact-title">
+          Let's build something <span class="serif-italic">minimal</span> and <span class="serif-italic">impactful</span>.
+        </h2>
+        <p class="contact-desc">
+          Open to software engineering internships, full-stack &amp; mobile collaborations, and interesting technical problems.
+        </p>
+
+        <div class="contact-actions">
+          <a href="mailto:oneashishshankar@gmail.com" class="btn btn-primary">
+            oneashishshankar@gmail.com ↗
+          </a>
+          <button id="copyEmailFooter" class="btn btn-outline" type="button" data-email="oneashishshankar@gmail.com">
+            Copy Address
+          </button>
+          <a href="https://github.com/Ashishshankar26" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">
+            github.com/Ashishshankar26 ↗
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span class="mono">© 2026 ASHISH SHANKAR · BUILT FROM GITHUB DATA</span>
+      <span class="mono muted">PRESS <kbd>I</kbd> TO INVERT · <kbd>⌘K</kbd> FOR PALETTE</span>
+    </div>
+  </footer>
+
+  <!-- Project Detail Modal -->
+  <div id="projectModal" class="modal-backdrop" hidden role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-card">
+      <div class="modal-header">
+        <span id="modalIndex" class="mono muted">01 / PROJECT</span>
+        <button id="closeModal" class="icon-btn" type="button" aria-label="Close modal">
+          <span class="mono">ESC ✕</span>
+        </button>
+      </div>
+      <h3 id="modalTitle" class="modal-title"></h3>
+      <p id="modalSubtitle" class="modal-subtitle"></p>
+      <p id="modalDesc" class="modal-desc"></p>
+      <ul id="modalHighlights" class="modal-highlights"></ul>
+      <div id="modalStack" class="tag-row"></div>
+      <div id="modalLinks" class="modal-links"></div>
+    </div>
+  </div>
+
+  <!-- Command Palette Modal -->
+  <div id="cmdModal" class="modal-backdrop" hidden role="dialog" aria-modal="true" aria-label="Command Palette">
+    <div class="cmd-card">
+      <div class="cmd-input-wrap">
+        <span class="mono muted">&gt;</span>
+        <input id="cmdInput" type="text" placeholder="Type a command or project name..." autocomplete="off" />
+        <button id="closeCmd" class="icon-btn" type="button"><span class="mono">ESC</span></button>
+      </div>
+      <div id="cmdResults" class="cmd-results"></div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast mono" role="status" aria-live="polite" hidden></div>
+
+  <script src="projects.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
